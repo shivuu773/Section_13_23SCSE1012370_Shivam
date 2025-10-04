@@ -1,0 +1,29 @@
+73. Set Matrix Zero[Medium] 21/sept/2025
+
+Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+Input: matrix = [[1,1,1],[1,0,1],[1,1,1]
+
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int[] rows = new int[matrix.length];
+        int[] cols = new int[matrix[0].length];
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if(matrix[i][j] == 0){ //Agar matrix[i][j] equal to 0 hai 
+                    rows[i] = 1; // uss rows ko 1 fill kr do
+                    cols[j] = 1;  // aur, uss cols ko 1 fill kr do
+                }
+            }
+        }
+        for(int i = 0; i < m; i++){
+            for(int j = 0; j < n; j++){
+                if(rows[i] == 1 || cols[j] == 1){
+                    matrix[i][j] = 0;
+                }
+            }
+        }
+    }
+}
