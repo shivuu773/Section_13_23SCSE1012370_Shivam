@@ -1,4 +1,4 @@
-560. Subarray Sum equals to K [Medium]
+560. Subarray Sum equals to K [Medium] 23/sept/2025
 
 Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
 
@@ -36,4 +36,5 @@ class Solution {
         }
         return count;
     }
+
 }
